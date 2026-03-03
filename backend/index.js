@@ -1,3 +1,5 @@
+dotenv.config()
+
 const express = require('express')
 const app = express()
 const port = 3000
@@ -13,7 +15,6 @@ const cartRoutes = require("./api/cartRoutes")
 const orderRoutes = require("./api/orderRoutes")
 const { verifyToken } = require('./middleware/authMiddleware')
 
-dotenv.config()
 
 app.use(cors())
 app.use(express.json())
