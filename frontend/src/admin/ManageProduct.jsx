@@ -11,7 +11,7 @@ const ManageProduct = () => {
 
     const handleProduct = async () => {
         try {
-            const { data } = await axios.get('http://localhost:3000/product/list')
+            const { data } = await axios.get('/product/list')
             setProductList(data.productList)
             console.log(data.productList)
         }
@@ -35,7 +35,7 @@ const ManageProduct = () => {
         formData.append('image', img)
 
         try {
-            const { data } = await axios.post('http://localhost:3000/product/add',
+            const { data } = await axios.post('/product/add',
                 formData
             )
             console.log(data)
@@ -59,7 +59,7 @@ const ManageProduct = () => {
 
     const handleDelete = async (id) => {
         try {
-            const { data } = await axios.delete(`http://localhost:3000/product/delete/${id}`)
+            const { data } = await axios.delete(`/product/delete/${id}`)
             toast(data.message)
             handleProduct()
         } catch (err) {
