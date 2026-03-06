@@ -1,20 +1,20 @@
 import axios from '../utils/axiosInstance'
 import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
     const [title, setTitle] = useState()
 
-    const handleTitle = async ()=> {
-        const {data} = await axios.get('/test')
+    const handleTitle = async () => {
+        const { data } = await axios.get('/test')
 
         setTitle(data)
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         handleTitle()
-    },[])
+    }, [])
 
 
     return (
@@ -27,8 +27,8 @@ const Home = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
                         <div className="mt-4">
-                            <Link to="/products" className="btn btn-secondary me-3">Browse Products</Link>
-                            <Link to="/products" className="btn btn-outline-secondary">View Deals</Link>
+                            <a to="/products" className="btn btn-secondary me-3">Browse Products</a>
+                            <a to="/products" className="btn btn-outline-secondary">View Deals</a>
                         </div>
                     </div>
                     <div className="col-md-6 text-center">
