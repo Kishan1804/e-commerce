@@ -1,5 +1,6 @@
 import axios from '../utils/axiosInstance'
 import React, { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
 
@@ -26,8 +27,8 @@ const Home = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
                         <div className="mt-4">
-                            <a href="/products" className="btn btn-secondary me-3">Browse Products</a>
-                            <a href="/products" className="btn btn-outline-secondary">View Deals</a>
+                            <Link to="/products" className="btn btn-secondary me-3">Browse Products</Link>
+                            <Link to="/products" className="btn btn-outline-secondary">View Deals</Link>
                         </div>
                     </div>
                     <div className="col-md-6 text-center">
